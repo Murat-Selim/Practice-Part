@@ -1,8 +1,9 @@
 import { storage, Context } from "near-sdk-as"
 
-// task 1,2,3
-export function helloWorld(names: Array<string>): string {
-  return names.map<string>(name => 'hello' + name).join(` `)
+// task 4
+export function helloWorld(): string {
+  const predecessor = Context.predecessor
+  return 'hello' + predecessor
 }
 
 
